@@ -1,0 +1,117 @@
+body {
+    background-image: url('flight.jpg');
+    /* Source: iStockPhoto */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    margin: 75px 20px 75px 20px;
+    background-color: #000;
+    opacity: 0.8;
+    color: rgb(245, 215, 125);
+    padding: 6px 20px;
+    width: 900px;
+}
+
+.top-20 {
+    margin-top: 4px;
+}
+
+h5 {
+    font-size: 18px;
+    color: #eea84c;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.field {
+    font-weight: bold;
+    text-align: right;
+}
+
+.field-value {
+    color: #e5efa5;
+}
+
+label.form {
+    font-size: 14px;
+    margin: 10px 14px;
+    width: 20%;
+}
+
+label.wrap {
+    font-size: 14px;
+    margin-left: 14px;
+    width: 5%;
+}
+
+input {
+    width: 50%;
+    padding: 6px 20px;
+    font-size: 16px;
+    margin: 10px 0px;
+}
+
+input.value {
+    width: 25%;
+    padding: 6px 20px;
+    font-size: 14px;
+    margin: 10px 0px;
+}
+
+button {
+    width: 15%;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #eea84c;
+    border: none;
+    color: #040303;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 8px;
+    text-decoration: none;
+    margin: 10px 14px;
+
+}
+
+button.long {
+    width: 97%;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #eea84c;
+    border: none;
+    color: #040303;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 8px 8px;
+    text-decoration: none;
+    margin: 10px 14px;
+
+}
+
+.form-break {
+    background-color: #eea84c;
+    color: white;
+    width: 100%;
+    padding: 1px;
+    margin: 10px 10px;
+}
+
+select.selectList {
+    margin: 10px 0px;
+    width: 75%;
+}
+
+textarea {
+    margin: 8px 0px;
+    height: 5em;
+    width: 40.5em;
+    vertical-align: top;
+}

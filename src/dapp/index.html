@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FlightSurety</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">FlightSurety</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    <main class="container">
+        <div id="display-wrapper" class="top-20"></div>
+        <div class="row top-20"></div>
+    </main>
+    <main class="container">
+        <h2>Admin</h2>
+        <div class="form-group">
+            <button class="long" id="change-operate">Change Operational Status</button><br>
+            <div class="form-break"></div>
+            <label class="form">Authorize Contract</label> <input type="text" id="contract-add">
+            <label class="wrap"></label><button id="add-contract">Authorize</button>
+        </div>
+    </main>
+
+    <main class="container">
+        <h2>Register Airline and send Seed money to participate</h2>
+        <div class="form-group">
+            <h5>Request Registration </h5>
+            <label class="form">Airline Name</label> <input type="text" id="al-name">
+            <label class="wrap"></label>
+            <button class="button-div" id="register-al">Request Registration</button><br>
+            <label class="form">Airline (address)</label> <input type="text" id="al-address">
+
+            <div class="form-break"></div>
+            <h5>Approve for Registration </h5>
+            <label class="form">Requested Airlines waiting for Registration</label>
+            <select class="selectList" name="flights" id="ftc-al-request">
+            </select><br>
+            <label class="form">Status will display </label> <input type="text" id="al-status" readonly>
+            <label class="wrap"></label>
+            <button class="button-div" id="status-al">Check Status</button><br>
+            <label class="wrap"></label>
+            <button class="long" id="approve-al">Approve Registration (Only Registered Airlines)</button><br>
+
+            <div class="form-break"></div>
+            <h5>Send seed money </h5>
+            <label class="form">Registered Airlines </label>
+            <select class="selectList" name="flights" id="ftc-al-registd">
+            </select><br>
+            <label class="form">Send Seed amount </label> <input type="text" id="al-amount" readonly>
+            <label class="wrap">ETH</label>
+            <button class="button-div" id="send-al">Send</button><br>
+        </div>
+    </main>
+    <main class="container">
+        <h2>Available Flights for Registration</h2>
+        <h5>Only accounts[1] to [6] have fixed flights available to add. </h5>
+        <div class="form-group">
+            <label class="form">Flights available </label> <select class="selectList" name="flights"
+                id="ftc-fl-register">
+            </select><br>
+            <label class="form">Display Flight Details</label><textarea id="fl-data" name="fl-data"
+                readonly></textarea><br>
+
+            <button class="long" id="register-fl">Register Flight</button>
+        </div>
+    </main>
+    <main class="container">
+        <h2>Book Flight</h2>
+        <div class="form-group">
+            <label class="form">Choose Flight </label>
+            <select class="selectList" name="flights" id="ftc-fl-book">
+            </select><br>
+            <label class="wrap">From</label><input type="text" id="fl-from" readonly>
+            <label class="wrap">Date</label><input class="value" type="text" id="fl-from-date" readonly><br>
+            <label class="wrap">To</label><input type="text" id="fl-to" readonly>
+            <label class="wrap">Date</label><input class="value" type="text" id="fl-to-date" readonly><br>
+            <label class="wrap">Price</label> <input class="value" type="text" id="fl-price" readonly>
+            <label class="wrap">ETH</label><br>
+            <label class="form">Purchase Insurance </label><input type="text" id="fl-insurance"> <label
+                class="wrap">ETH</label><br>
+            <label class="form">Passenger Address</label> <input type="text" id="pass-address"><br>
+            <button class="long" id="book-fl">Book Flight</button>
+        </div>
+    </main>
+
+    <main class="container">
+        <h2>Request Flight Status</h2>
+        <div class="form-group">
+            <label class="form">Choose Flight </label>
+            <select class="selectList" name="flights" id="ftc-fl-status">
+            </select><br>
+            <button class="long" id="request-fl-status">Request Oracles Flight Status</button>
+        </div>
+    </main>
+    <main class="container">
+        <h2>Claim Insurance</h2>
+        <h5>When flight is delayed airlines pay the passenger 1.5X the ticket amount paid at booking</h5>
+        <div class="form-group">
+            <label class="form">Choose Flight </label>
+            <select class="selectList" name="flights" id="ftc-fl-insurance">
+            </select><br>
+            <label class="form">Status will display </label> <input type="text" id="fl-status" readonly>
+            <label class="wrap"></label>
+            <button class="button-div" id="status-fl">Check Status</button><br>
+            <label class="form">Passenger Claims List </label>
+            <select class="selectList" name="claims" id="ftc-fl-claims">
+            </select><br>
+            <button class="long" id="claims-fl">Process All Claims for the flight</button>
+        </div>
+        <div class="form-break"></div>
+        <h5>Once claim is processed for the flight , check if the credit is ready/available for the above flight .
+            If the credit is available passenger can withdraw </h5>
+        <label class="form">Passenger Address</label><input id="pass-address-claim" type="text"><br>
+        <label class="form">Withdraw Insurance</label><input id="fl-payout" value="0" type="text" readonly><label
+            class="wrap">ETH</label>
+        <button id="check-credit">Check Credit</button><br>
+        <button class="long" id="withdraw-fl">Withdraw</button>
+    </main>
+
+
+</body>
+
+</html>
